@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact - Gotham Silicon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background-color: #000;
@@ -26,7 +27,61 @@
     }
     main {
       padding: 0 20px;
-      margin-top: 40px;
+      max-width: 900px;
+      margin: 40px auto;
+    }
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      nav a {
+        margin: 0 10px;
+      }
+    }
+    
+    /* Footer Styles */
+    footer {
+      margin-top: 60px;
+      padding: 30px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #mc_embed_signup {
+      background: transparent;
+      clear: left;
+      width: 100%;
+      text-align: left;
+    }
+    #mc_embed_signup h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    #mc_embed_signup .mc-field-group {
+      margin-bottom: 15px;
+    }
+    #mc_embed_signup label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    #mc_embed_signup input.email {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      margin-bottom: 10px;
+    }
+    #mc_embed_signup .button {
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 5px;
+    }
+    #mc_embed_signup .button:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
   </style>
 </head>
@@ -43,11 +98,54 @@
 
   <main>
     <h2>Contact</h2>
-    <p>Please email us at 
-      <a href="mailto:milessegal@gothamsilicon.com" style="color:#fff; text-decoration:underline;">
-        milessegal@gothamsilicon.com
-      </a>.
+    <p>Contact us 
+      <a href="https://josh.com/contact.html" style="color:#fff; text-decoration:underline;">
+        here
+      </a>
     </p>
   </main>
+
+  <footer>
+    <div id="mc_embed_signup">
+      <form action="https://gothamsilicon.us2.list-manage.com/subscribe/post?u=649a738ac9b209ca62d252d94&amp;id=9c9124a3a2&amp;f_id=00b971e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div id="mc_embed_signup_scroll"><h2>Be the first to know about what we are up to</h2>
+          <div class="mc-field-group"><label for="mce-EMAIL">Email Address </label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
+          </div>
+          <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_649a738ac9b209ca62d252d94_9c9124a3a2" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe"></div>
+        </div>
+      </form>
+    </div>
+  </footer>
+  
+  <!-- Load scripts asynchronously to avoid blocking page load -->
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" async defer></script>
+  <script type="text/javascript">
+    // Load the script after the page has loaded to avoid blocking
+    window.addEventListener('load', function() {
+      (function($) {
+        window.fnames = new Array(); 
+        window.ftypes = new Array();
+        fnames[0]='EMAIL';
+        ftypes[0]='email';
+        fnames[1]='FNAME';
+        ftypes[1]='text';
+        fnames[2]='LNAME';
+        ftypes[2]='text';
+        fnames[3]='ADDRESS';
+        ftypes[3]='address';
+        fnames[4]='PHONE';
+        ftypes[4]='phone';
+        fnames[5]='BIRTHDAY';
+        ftypes[5]='birthday';
+        fnames[6]='COMPANY';
+        ftypes[6]='text';
+      }(jQuery));
+      var $mcj = jQuery.noConflict(true);
+    });
+  </script>
 </body>
 </html>
