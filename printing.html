@@ -50,7 +50,8 @@
       margin-top: 10px;
       font-style: italic;
     }
-    .price {
+    .price,
+    .processing {
       text-align: center;
       font-size: 1.5em;
       margin: 40px 0;
@@ -62,6 +63,37 @@
     .form-link a {
       color: #fff;
       text-decoration: underline;
+    }
+    .button {
+      background-color: transparent;
+      border: 2px solid #fff;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-family: "Times New Roman", serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    dl {
+      margin-top: 20px;
+    }
+    dt {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    dd {
+      margin-left: 0;
+      margin-bottom: 10px;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -79,21 +111,25 @@
   <main>
     <h2>Ultra High Resolution Printing Services</h2>
     <ul style="text-align: left; max-width: 600px; margin: 20px auto; padding-left: 40px;">
-      <li style="margin-bottom: 10px;">4.75" x 4.75" design space on a 5" x 5" substrate</li>
-      <li style="margin-bottom: 10px;">750nm x 750nm pixel size (33,866 DPI), a human hair is around 100,000 nanometers wide btw</li>
-      <li style="margin-bottom: 10px;">Total pixel footprint of 25,878,012,676 pixels</li>
-      <li style="margin-bottom: 10px;">Capacity for over a billion characters with a compact font like <a href="https://www.dafont.com/zepto.font" style="color: #fff; text-decoration: underline;">Zepto</a> (8px)</li>
+      <li style="margin-bottom: 10px;">4.75" x 4.75" design space on a 5" x 5" plate</li>
+      <li style="margin-bottom: 10px;">750nm x 750nm pixel size (human hair is about 100,000 nanometers)
+</li>
+      <li style="margin-bottom: 10px;">As an image, that's 25,878,012,676 pixels</li>
+      <li style="margin-bottom: 10px;">As text, that’s over a billion characters with a compact font like <a href="https://www.dafont.com/zepto.font" style="color: #fff; text-decoration: underline;">Zepto</a> (8px)</li>
     </ul>
     <div class="price">
       <p> Price: $3000</p>
     </div>
+    <div class="processing">
+      <p>Processing time: 1 week</p>
+    </div>
     <div class="form-link">
-      <p>Buy now <a href="https://buy.stripe.com/5kQ3cu44C2m5da23NP7ok05" style="color: #fff; text-decoration: underline;">here</a>.</p>
+      <a href="https://buy.stripe.com/5kQ3cu44C2m5da23NP7ok05" class="button">Buy Now</a>
     </div>
     <div class="image-container">
       <figure>
         <img src="fullphotomaskmacro.jpg" alt="The entire patterned photomask.">
-        <figcaption>The full 5x5 inch photomask, containing a 420-page book printed as images of the pages. Printing as text would be enormously more space-efficient and would allow you to do things like print the complete old testimate hundreds of times.</figcaption>
+        <figcaption>The full 5x5 inch photomask, containing a 420-page book printed as images of the pages. Printing as pure text would be enormously more space-efficient and would allow you to do things like print the complete old testimate hundreds of times.</figcaption>
       </figure>
     </div>
     <div class="image-container">
@@ -108,9 +144,55 @@
     </p>
 
     <h3>FAQ</h3>
-    <p>
-      ...
-    </p>
+    <dl>
+      <dt>Q: What formats do you accept?</dt>
+      <dd>A: We can directly accept monochrome PNG, GIF, TIFF, or JPG image files, and PDF, DOC, or TXT text files. We can help you to prepare your content for this process (these are VERY big files!).</dd>
+
+      <dt>Q: Is the text readable?</dt>
+      <dd>A: At 8px, the text is only readable under a high-power microscope. You can use bigger font sizes to make the text readable under, say, a high quality loupe or magnifying glass. We can help you pick the best size font for your content and application.</dd>
+
+      <dt>Q: Is the image positive or negative?</dt>
+      <dd>A: Any pixel that is ON in your file will be chrome and any pixel that is OFF will be transparent. The chrome is both opaque and reflective, so the image will look positive if front illuminated and negative if rear illuminated. It is kind of like 35mm negative film, except the chrome is mirror reflective rather than matte like film.</dd>
+
+      <dt>Q: What is it made of?</dt>
+      <dd>A: The image is etched into an opaque layer of chrome metal (125nm thick) on top of a sheet of quartz glass.</dd>
+
+      <dt>Q: How do you ship?</dt>
+      <dd>A:For USA orders, we will ship overnight via UPS, FedEx, or USPS (your choice). For overseas orders, please <a href="https://forms.gle/FQMdsgf914yXkn5X7" style="color: #fff; text-decoration: underline;">get in touch</a> to make arrangements for the best option for your country.</dd>
+
+      <dt>Q: Can you do color?</dt>
+      <dd>A: We actually can do color (even structural coloration!), but that is much more complicated (and so will be much more expensive), so <a href="https://forms.gle/FQMdsgf914yXkn5X7" style="color: #fff; text-decoration: underline;">get in touch</a> if you are interested.</dd>
+
+      <dt>Q: What does the ordering process look like?</dt>
+      <dd>A: When you click the buy button above and make payment, you will get an email from us with a link to upload your file. Once we get your file, we will generate a proof image for your approval. Once you approve the proof, we will add your job to the queue and let you know when it will be ready to ship.</dd>
+
+      <dt>Q: Is there a money back guarantee?</dt>
+      <dd>A: We will happily issue a full refund up until the day we start physically making your design, but once we begin the production process then you are on the hook (unless, of course, the image ends up not matching your approved proof or there are any quality problems!). Ultimately, we want you to be happy, so we will do everything possible to make sure you get what you wanted.</dd>
+
+      <dt>Q: I know what I want to print, but I am not sure how to get it into a file that I can submit to you.</dt>
+      <dd>A: We can help with this! We have experience with printing everything from ultra-hires satellite photos to micrometer-sized board games, so we can probably figure out how to best print your content. Place your order to start the process – we promise to immediately issue a full refund if it turns out we cannot make the exact thing you want.</dd>
+
+      <dt>Q: Do you offer rush service?</dt>
+      <dd>A: Maybe! Right now we are committing to ship all orders within 1 week after receiving your proof approval, but there is a good chance that your order could ship sooner than that. If you absolutely need it in a fixed timeframe, <a href="https://forms.gle/FQMdsgf914yXkn5X7" style="color: #fff; text-decoration: underline;">get in touch with us</a> and we will see if we can schedule that for you!</dd>
+
+      <dt>Q: Do you offer pick-up service?</dt>
+      <dd>A: If you are in the NYC metro area, we can make arrangements to get your image directly to you without shipping.</dd>
+
+      <dt>Q: Can I come to the clean room and watch my image get processed?</dt>
+      <dd>A: Only if you have your own bunny suit and are hydrofluoric acid certified! (Actually we really cannot let you in, sorry. Maybe someday will we have a visitors gallery. 😊)</dd>
+
+      <dt>Q: Do you offer quantity discounts?</dt>
+      <dd>A: Maybe! If you need more than 10 copies of the same image, <a href="https://forms.gle/yguDWXoMFjXPJxGa7" style="color: #fff; text-decoration: underline;">get in touch</a>!</dd>
+
+      <dt>Q: Why are you doing this?</dt>
+      <dd>A: We are a brand-new, NYC-based integrated circuit fab! We just got our photolithography process up and running smoothly, so we thought it would be fun to offer this service and see what ideas people come up with. (We are also a startup, so we are excited to start generating some revenue with real customers even before we get the full IC process line into production! 😊)</dd>
+
+      <dt>Q: Can you do X?</dt>
+      <dd>A: Maybe! Unlike the big fabs, we are small and fast and fun and excited to try new things, so please <a href="https://forms.gle/FQMdsgf914yXkn5X7" style="color: #fff; text-decoration: underline;">get in touch with us</a>!</dd>
+
+      <dt>Q: But what about X?</dt>
+      <dd>A: Please <a href="https://forms.gle/FQMdsgf914yXkn5X7" style="color: #fff; text-decoration: underline;">get in touch</a> if you have any other questions!</dd>
+    </dl>
 
   </main>
 </body>
