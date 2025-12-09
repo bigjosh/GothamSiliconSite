@@ -12,7 +12,7 @@
     gtag('config', 'G-W5GCX79MY9');
   </script>
   <meta charset="UTF-8">
-  <title>Gotham Silicon - Home</title>
+  <title>Gotham Silicon - Pi Plate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -25,25 +25,14 @@
       display: flex;
       flex-direction: column;
       height: 100vh;
-      /* Force full height */
+      /* Force full height to control layout */
       overflow: hidden;
-      /* Prevent scrolling */
+      /* Prevent scrolling if possible */
     }
 
     header {
       padding: 20px 0 10px 0;
       /* Reduced padding */
-    }
-
-    .news-banner {
-      border: 1px solid #fff;
-      background-color: transparent;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-      font-size: 1.1em;
-      margin: 0 auto 40px auto;
-      max-width: 900px;
     }
 
     nav {
@@ -59,7 +48,8 @@
     }
 
     main {
-      padding: 0 20px;
+      padding: 0 20px 60px 20px;
+      /* Added bottom padding for sticky footer */
       max-width: 1200px;
       margin: 0 auto;
       flex-grow: 1;
@@ -67,12 +57,62 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      /* Align to top */
+      /* Align content to top */
     }
 
     h2 {
       margin-top: 0;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      max-height: 40vh;
+      /* Reduced height */
+      margin-bottom: 40px;
+      /* Added bottom margin */
+      flex-shrink: 1;
+      /* Allow shrinking */
+      min-height: 0;
+      /* Allow flex item to shrink below content size */
+    }
+
+    .product-image {
+      max-width: 45%;
+      /* Share width */
+      max-height: 100%;
+      /* Respect container height */
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .purchase-button {
+      display: inline-block;
+      margin-bottom: 30px;
+      /* Space below button */
+      padding: 10px 25px;
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .purchase-button:hover {
+      background-color: #fff;
+      color: #000;
     }
 
     /* Footer Styles */
@@ -86,19 +126,6 @@
       padding: 10px 0;
       font-size: 0.8em;
       z-index: 1000;
-    }
-
-    main {
-      padding: 0 20px 60px 20px;
-      /* Added bottom padding for sticky footer */
-      max-width: 1200px;
-      margin: 0 auto;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      /* Align to top */
     }
 
     #mc_embed_signup {
@@ -115,55 +142,35 @@
 
     #mc_embed_signup h2 {
       display: none;
+      /* Hide header to save space */
     }
 
     #mc_embed_signup .mc-field-group {
       flex-grow: 0;
     }
 
-    #mc_embed_signup label {
-      display: none;
-    }
-
     #mc_embed_signup input.email {
-      width: 100%;
-      max-width: 300px;
       padding: 5px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
     }
 
     #mc_embed_signup .button {
-      background: transparent;
-      color: white;
-      border: 1px solid white;
       padding: 5px 10px;
-      cursor: pointer;
-      transition: background 0.3s;
     }
 
-    #mc_embed_signup .button:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    /* Responsive styles */
+    /* Responsive adjustments */
     @media (max-width: 768px) {
       body {
         height: auto;
         overflow: auto;
       }
 
-      nav a {
-        margin: 0 10px;
-      }
-
-      footer form {
+      .image-container {
         flex-direction: column;
-        align-items: stretch;
+        max-height: none;
       }
 
-      footer input.email {
+      .product-image {
+        max-width: 90%;
         margin-bottom: 10px;
       }
     }
@@ -183,15 +190,14 @@
   </nav>
 
   <main>
-    <h2>About Us</h2>
-    <p>Gotham Silicon is about making nanofabrication easy, fast, and cheap.</p>
-    <p>All 1.5 people who are working on this are based in New York City.</p>
-    <p>(Don't worry we got this)</p>
+    <h2>Pi Plate</h2>
+    <p class="description">The first 1,000,000,000 digits of pi. Printed in chromium metal.</p>
 
-    <div
-      style="margin: 20px 0 40px 0; text-align: center; flex-grow: 1; display: flex; align-items: center; justify-content: center; overflow: hidden; min-height: 0;">
-      <img src="bench_setup.jpg" alt="Bench Setup"
-        style="max-width: 100%; max-height: 40vh; width: auto; height: auto; border: 1px solid rgba(255, 255, 255, 0.2); object-fit: contain;">
+    <a href="https://buy.stripe.com/cNi8wOgRod0Jgme9897ok07" class="purchase-button">Purchase Pi Plate</a>
+
+    <div class="image-container">
+      <img src="piplate_wafer.jpg" alt="Pi Plate Wafer" class="product-image">
+      <img src="piplate_microscope.jpg" alt="Pi Plate under microscope" class="product-image">
     </div>
   </main>
 
