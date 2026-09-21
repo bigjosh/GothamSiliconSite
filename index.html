@@ -24,10 +24,7 @@
       text-align: center;
       display: flex;
       flex-direction: column;
-      height: 100vh;
-      /* Force full height */
-      overflow: hidden;
-      /* Prevent scrolling */
+      min-height: 100vh;
     }
 
     header {
@@ -47,19 +44,35 @@
     }
 
     nav {
-      margin-bottom: 20px;
-      /* Reduced margin */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 40px;
+      margin: 0 20px 20px;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
-      margin: 0 20px;
       font-weight: bold;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    a:focus-visible,
+    input:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 4px;
     }
 
     main {
       padding: 0 20px;
+      box-sizing: border-box;
+      width: 100%;
       max-width: 1200px;
       margin: 0 auto;
       flex-grow: 1;
@@ -75,30 +88,90 @@
       margin-bottom: 15px;
     }
 
+    .chip-image {
+      margin: 20px 0 40px;
+    }
+
+    .chip-image img {
+      display: block;
+      max-width: 100%;
+      max-height: 40vh;
+      width: auto;
+      height: auto;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      object-fit: contain;
+    }
+
+    .follow-project {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      scroll-margin-top: 24px;
+    }
+
+    .follow-intro {
+      max-width: 680px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+
+    .project-tools {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      text-align: left;
+    }
+
+    .project-tool {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .project-tool h3 {
+      margin: 0 0 12px;
+      font-size: 1.3em;
+    }
+
+    .project-tool p {
+      margin: 0 0 24px;
+      color: #ddd;
+      line-height: 1.5;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      margin-top: auto;
+    }
+
+    .project-links a {
+      color: #fff;
+      line-height: 1.5;
+      text-underline-offset: 4px;
+    }
+
+    .project-links a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    .follow-note {
+      margin: 24px auto 0;
+      color: #ddd;
+      line-height: 1.5;
+    }
+
     /* Footer Styles */
     footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
       width: 100%;
       background-color: #111;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       padding: 10px 0;
       font-size: 0.8em;
-      z-index: 1000;
-    }
-
-    main {
-      padding: 0 20px 60px 20px;
-      /* Added bottom padding for sticky footer */
-      max-width: 1200px;
-      margin: 0 auto;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      /* Align to top */
     }
 
     #mc_embed_signup {
@@ -126,6 +199,7 @@
     }
 
     #mc_embed_signup input.email {
+      box-sizing: border-box;
       width: 100%;
       max-width: 300px;
       padding: 5px;
@@ -149,22 +223,16 @@
 
     /* Responsive styles */
     @media (max-width: 768px) {
-      body {
-        height: auto;
-        overflow: auto;
+      nav {
+        column-gap: 20px;
       }
 
-      nav a {
-        margin: 0 10px;
+      .project-tools {
+        grid-template-columns: 1fr;
       }
 
-      footer form {
+      #mc_embed_signup form {
         flex-direction: column;
-        align-items: stretch;
-      }
-
-      footer input.email {
-        margin-bottom: 10px;
       }
     }
   </style>
@@ -178,6 +246,7 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="piplate.html">Pi Plate</a>
+    <a href="follow-project.html">Follow the project</a>
   </nav>
 
   <main>
@@ -189,11 +258,50 @@
       Contact us <a href="https://forms.gle/yguDWXoMFjXPJxGa7" style="color:#fff; text-decoration:underline;">here</a>.
     </p>
 
-    <div
-      style="margin: 20px 0 40px 0; text-align: center; flex-grow: 1; display: flex; align-items: center; justify-content: center; overflow: hidden; min-height: 0;">
-      <img src="chip.jpg" alt="Bench Setup"
-        style="max-width: 100%; max-height: 40vh; width: auto; height: auto; border: 1px solid rgba(255, 255, 255, 0.2); object-fit: contain;">
+    <div class="chip-image">
+      <img src="chip.jpg" alt="Gotham silicon chip viewed through a microscope">
     </div>
+
+    <section id="follow-project" class="follow-project" aria-labelledby="follow-project-heading">
+      <h2 id="follow-project-heading">Follow the project</h2>
+      <p class="follow-intro">
+        Follow Gotham Silicon as it develops. Josh built these tools for the project, and you can explore
+        the code, build notes, and latest changes in their GitHub repositories.
+      </p>
+
+      <p class="follow-intro"><a href="follow-project.html" style="color: #fff; text-underline-offset: 4px;">Read the project page: lab recordings, tools, tutorials, and process research →</a></p>
+
+      <div class="project-tools">
+        <article class="project-tool" aria-labelledby="spincoater-heading">
+          <h3 id="spincoater-heading">Spincoater</h3>
+          <p>A six-sample spincoater for thin-film coating, with programmable spin recipes and build instructions.</p>
+          <div class="project-links">
+            <a href="https://github.com/bigjosh/gotham-spincoater" aria-label="View Spincoater on GitHub">View on GitHub</a>
+            <a href="https://github.com/bigjosh/gotham-spincoater/commits" aria-label="Latest Spincoater updates">Latest updates</a>
+          </div>
+        </article>
+
+        <article class="project-tool" aria-labelledby="dwl-heading">
+          <h3 id="dwl-heading">DWL66+ automation</h3>
+          <p>Automation for step-and-expose lithography across a grid of individual samples on the DWL66+ laserwriter.</p>
+          <div class="project-links">
+            <a href="https://github.com/bigjosh/Automate-DWL66-plus-litography-machine" aria-label="View DWL66+ automation on GitHub">View on GitHub</a>
+            <a href="https://github.com/bigjosh/Automate-DWL66-plus-litography-machine/commits" aria-label="Latest DWL66+ automation updates">Latest updates</a>
+          </div>
+        </article>
+
+        <article class="project-tool" aria-labelledby="mosfet-heading">
+          <h3 id="mosfet-heading">Pocket MOSFET scanner</h3>
+          <p>A pocket-sized Arduino rig for measuring MOSFET characteristics and gate leakage, with a phone-friendly interface.</p>
+          <div class="project-links">
+            <a href="https://github.com/bigjosh/arduino-mosfet-scanner" aria-label="View Pocket MOSFET scanner on GitHub">View on GitHub</a>
+            <a href="https://github.com/bigjosh/arduino-mosfet-scanner/commits" aria-label="Latest Pocket MOSFET scanner updates">Latest updates</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="follow-note">Use Watch on GitHub to get notified about activity in each repository.</p>
+    </section>
   </main>
 
   <footer>
@@ -205,7 +313,7 @@
         <div class="mc-field-group">
           <label for="mce-EMAIL">Email Address</label>
           <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""
-            placeholder="Email Address">
+            placeholder="Email Address" aria-label="Email Address">
         </div>
         <div class="clear">
           <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">

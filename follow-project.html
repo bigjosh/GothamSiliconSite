@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Follow the project - Gotham Silicon</title>
+  <meta name="description" content="Follow Gotham Silicon's process development, lab tools, furnace and recording tutorials, process runsheets, and experiments.">
+  <link rel="stylesheet" href="follow-project.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W5GCX79MY9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-W5GCX79MY9');
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <p class="site-title"><a href="index.html">Gotham Silicon</a></p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="piplate.html">Pi Plate</a>
+      <a href="follow-project.html" aria-current="page">Follow the project</a>
+    </nav>
+  </header>
+  <div class="page-heading"><h1>Follow the project</h1></div>
+  <div class="page-layout">
+    <details class="contents" open>
+      <summary>On this page</summary>
+      <nav aria-label="On this page">
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#lab-recordings">Recordings of lab sessions</a></li>
+          <li><a href="#tools">Tools with documentation</a>
+            <ol>
+              <li><a href="#furnace">Furnace</a></li>
+              <li><a href="#pov-recorder">POV recorder</a></li>
+              <li><a href="#transistor-tester">Transistor tester</a></li>
+              <li><a href="#spin-coater">Spin coater</a></li>
+              <li><a href="#dwl-automation">DWL automation</a></li>
+            </ol>
+          </li>
+          <li><a href="#research-agenda">Process research agenda</a>
+            <ol>
+              <li><a href="#nmos-test-processes">Berkeley NMOS test processes</a></li>
+              <li><a href="#nmos-production">Berkeley NMOS production</a></li>
+              <li><a href="#cmos-production">Berkeley CMOS production</a></li>
+            </ol>
+          </li>
+          <li><a href="#good-moments">Good moments from the past two years</a>
+            <ol>
+              <li><a href="#pepsi">Pepsi and aluminum contacts</a></li>
+              <li><a href="#pocketfiche">Pocket fiche production</a></li>
+              <li><a href="#nmos-proof">Eight-hour NMOS process</a></li>
+              <li><a href="#wafer-connector">40-pin wafer connector</a></li>
+            </ol>
+          </li>
+        </ol>
+      </nav>
+    </details>
+    <script>
+      // Keep navigation compact on small screens; native details still works without JavaScript.
+      if (window.matchMedia('(max-width: 850px)').matches) {
+        document.querySelector('.contents').open = false;
+      }
+    </script>
+
+    <main class="content" id="main-content">
+      <section id="overview" aria-labelledby="overview-heading">
+        <h2 id="overview-heading">Overview: purpose, approach, and current milestones</h2>
+        <p>The goal of Gotham Silicon is to make fabrication of simple MOS electronics easy, fast, and cheap.</p>
+        <figure class="overview-photo"><a class="photo-link" style="--photo-max-width: 877px" href="assets/follow-project/overview-chip.jpg" aria-label="View full-size image: A gloved hand holding a small patterned silicon chip"><img src="assets/follow-project/overview-chip-957.webp" srcset="assets/follow-project/overview-chip-480.webp 480w, assets/follow-project/overview-chip-957.webp 957w" sizes="(max-width: 520px) calc(100vw - 40px), 560px" width="957" height="720" alt="A gloved hand holding a small patterned silicon chip" fetchpriority="high" decoding="async"></a><figcaption><a href="assets/follow-project/overview-chip.jpg">View full-size photo</a></figcaption></figure>
+        <p>Process development is happening at two university cleanrooms in the US: Columbia Nano Initiative, and Berkeley’s Marvell Nanofabrication Laboratory.</p>
+      </section>
+
+      <section id="lab-recordings" aria-labelledby="recordings-heading">
+        <h2 id="recordings-heading">Recordings of lab sessions</h2>
+        <p>Recordings of lab sessions are available on my YouTube channel.</p>
+        <div class="actions"><a class="action video-link" href="https://www.youtube.com/@nfjesifb"><span aria-hidden="true">▶</span> Visit @nfjesifb on YouTube</a></div>
+      </section>
+
+      <section id="tools" aria-labelledby="tools-heading">
+        <h2 id="tools-heading">Tools with documentation</h2>
+
+        <article class="tool" id="furnace" aria-labelledby="furnace-heading">
+          <h3 id="furnace-heading">Furnace</h3>
+          <p>A ~$100 tube furnace that reaches over 1,000 °C and can be assembled in two hours if you know what you’re doing.</p>
+          <aside class="status" aria-label="Furnace safety note">
+            <p><strong>Safety note:</strong> This build involves 120 V mains electricity and temperatures over 1,000 °C. Don't try this without understanding what could go wrong and how to avoid them. Some of those risks are breathing in glass fibers, burning yourself severely, electrocuting yourself, or starting a fire. </p>
+          </aside>
+          <h4 id="furnace-ingredients">Ingredients</h4>
+          <ol class="parts">
+<li><a href="https://a.co/d/0fil4QJ4">MMasters ceramic fiber insulation blanket (24 x 8 x 1 in)</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://a.co/d/04gTbFEk">Master Wire Supply Kanthal A1 wire (22 gauge, 50 ft)</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://a.co/d/0dEwP04W">beinkmake insulating ceramic support rods (7.87 x 0.08 in, 10-pack)</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://a.co/d/09O9qivM">CDMALL AC motor speed controller (120 V, 15 A)</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://a.co/d/09rveoYW">GTJ silicone baking mat roll (12 in x 6 ft)</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://www.mcmaster.com/4100N17/">Quartz glass tube (1 in OD, 0.866 in ID, 12 in long)</a> <span class="vendor">(McMaster-Carr)</span></li>
+<li><a href="https://www.mcmaster.com/94610A311/">Ceramic washers (1.062 in ID, 2.5 in OD) — 2 required</a> <span class="vendor">(McMaster-Carr)</span></li>
+<li><a href="https://a.co/d/08Pi6LS9">K-type kiln thermocouple probe (0–1300 °C, 3.3 ft extension wire)</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://a.co/d/01UODP8I">HBN plug-in watt meter with backlight</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://a.co/d/0bE8Bd0l">Proster dual-channel thermocouple thermometer with 2 probes</a> <span class="vendor">(Amazon)</span> <strong>or</strong> <a href="https://a.co/d/0dPyikDC">SafeSense TempTouch Wi-Fi thermocouple sensor</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://a.co/d/014SVPVT">High-temperature polyimide tape (1 in x 33 m)</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://a.co/d/05JnO4tw">GUBCUB two-way ceramic terminal blocks (25 A, 380 V, 5-pack)</a> <span class="vendor">(Amazon)</span></li>
+</ol>
+
+          <h4 id="furnace-steps">Steps</h4>
+          <div class="equations" aria-label="Heating element calculations">
+            <p>V = IR</p>
+            <p>W = IV</p>
+            <p>360 W = 120 V × 3 A</p>
+            <p>120 V = 3 A × 40 Ω</p>
+          </div>
+          <ol class="steps">
+            <li>
+              <strong class="step-title">Measure and cut the wire</strong>
+              <p>Measure and cut a ~40-ohm length of Kanthal A1 wire. Remember to err shorter rather than longer, because you can compensate with the AC motor speed controller. If you cut too long, such that you can’t get enough power using the 120 V wall outlet, then your furnace might not get hot enough. Shorter is also easier for winding. If you cut way too short you will not have good control over the system.</p>
+            </li>
+            <li>
+              <strong class="step-title">Wind the heating element</strong>
+              <p>The next steps require some finesse. Find something approximately the thickness of a pencil, but ideally round, more rigid, and slightly longer—something like a threaded rod or dowel.</p>
+              <p>Uniformly wind the wire around that rod until it is the desired length for your heating element (~6 inches if you are using the 8-inch-wide insulation listed above). Once you’ve wound 6 inches, slide the winding off the rod; it should hold its shape.</p>
+              <p>Start winding another 6 inches with ~2 cm of straight wire between the windings, until you’ve consumed enough of the wire. Make sure to leave ~6 inches of unwound wire on either end to have ample room for electrical connections.</p>
+            </li>
+            <li>
+              <strong class="step-title">Secure the coils to the insulation</strong>
+              <p>Place the ceramic fiber insulation flat onto a working surface. Use gloves and be outdoors or in a safely ventilated setting.</p>
+              <p>Insert one of the ~6-inch wire leads through the insulation 1 cm in from a corner, pulling the lead through until the first wound coil stops it from moving further. Place one of the ceramic rods through the middle of this first coil so it can’t bend. The rods are there only to provide structural support; the Kanthal A1 wire is the heating element.</p>
+              <p>Make a switchback pattern with the subsequent coils, ensuring that in total the switchbacks don’t take up more than 7.8 inches of the ceramic fiber insulation (2.5 inches, the outer diameter of the washer, × 3.14).</p>
+              <p>Insert ceramic rods into each coil, and cut ~2 cm lengths from your original spool of wire to use as staples to secure the coils into the insulation. Be careful to ensure coils and staples aren’t at risk of shorting to each other.</p>
+              <p>Once all the coils are safely secured, thread the ending lead through the ceramic fiber insulation and pull it taut, like you did at the beginning.</p>
+              <figure><a class="photo-link" style="--photo-max-width: 878px" href="assets/follow-project/furnace-switchbacks.jpg" aria-label="View full-size image: An earlier furnace heating element secured in a switchback pattern on ceramic fiber insulation"><img src="assets/follow-project/furnace-switchbacks-957.webp" srcset="assets/follow-project/furnace-switchbacks-480.webp 480w, assets/follow-project/furnace-switchbacks-957.webp 957w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 850px) calc(100vw - 48px), 822px" width="957" height="719" alt="An earlier furnace heating element secured in a switchback pattern on ceramic fiber insulation" loading="lazy" decoding="async"></a><figcaption>This image is from an older furnace iteration. It does not have the described coils with rods in the center, but it does show the switchbacks secured by metal staples. Hopefully it gives you a sense of how things might look. Sorry for not having an up-to-date photo of this step. <a href="assets/follow-project/furnace-switchbacks.jpg">View full-size photo</a></figcaption></figure>
+              <p>A diagram is coming soon to better explain this.</p>
+            </li>
+            <li>
+              <strong class="step-title">Position the quartz tube and washers</strong>
+              <p>Once the coils are secured, place the ceramic washers around the quartz tube. Place the tube centered on the insulation, protruding 2 inches out from it on either side if you bought the insulation above, with each washer on either side of the coils, ~1 cm from the end of the insulation.</p>
+            </li>
+            <li>
+              <strong class="step-title">Roll the insulation</strong>
+              <p>Roll the insulation around the washer/tube system until the insulation totally surrounds it, then continue rolling until you run out of insulation. Keep threading the leads through the insulation so they have a path out from the center.</p>
+              <p>Be careful as you roll that the coils stay put. If they get dislodged and close to each other, they may continue to move around and immediately or eventually cause a short. If you notice the coils are too close, unroll the insulation and adjust them, securing with additional staples, changing the coil spacing, or whatever else is necessary to ensure this risk is sufficiently mitigated.</p>
+            </li>
+            <li>
+              <strong class="step-title">Wrap the furnace</strong>
+              <p>Wrap the whole insulated cylinder with the silicone sheet, cutting it to size, and use Kapton tape to prevent unraveling and keep everything together. The leads should puncture the silicone cover so you can connect to them.</p>
+            </li>
+            <li>
+              <strong class="step-title">Connect the electrical leads</strong>
+              <p>Connect the heating element’s electrical leads and the hot and neutral conductors of a modified electrical outlet cable (any old extension cord or power supply cable) using the ceramic electrical terminal.</p>
+              <figure><a class="photo-link" style="--photo-max-width: 497px" href="assets/follow-project/furnace-assembly.jpg" aria-label="View full-size image: The assembled tube furnace outdoors beside a temperature meter"><img src="assets/follow-project/furnace-assembly-960.webp" srcset="assets/follow-project/furnace-assembly-480.webp 480w, assets/follow-project/furnace-assembly-960.webp 960w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 850px) calc(100vw - 48px), 822px" width="960" height="1275" alt="The assembled tube furnace outdoors beside a temperature meter" loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/furnace-assembly.jpg">View full-size photo</a></figcaption></figure>
+            </li>
+            <li>
+              <strong class="step-title">Add end caps</strong>
+              <p>Add silicone or Home Depot tile end caps on either side of the tube for fanciness.</p>
+              <figure><video class="video" controls playsinline preload="none" poster="assets/follow-project/linked/furnace-endcaps-poster-800.webp" width="720" height="1280" aria-label="Furnace end caps demonstration"><source src="assets/follow-project/linked/furnace-endcaps.mp4" type="video/mp4">Your browser does not support video. <a href="assets/follow-project/linked/furnace-endcaps.mp4">Open the furnace video</a>.</video><figcaption>Furnace end caps · 3-second video. <a href="https://photos.app.goo.gl/CaXBUC9TqkXUks9bA">View on Google Photos</a></figcaption></figure>
+            </li>
+            <li>
+              <strong class="step-title">Connect power and monitor the temperature</strong>
+              <p>Plug into your AC motor speed controller, power meter, and a wall outlet.</p>
+              <p><strong>Slowly ramp while monitoring the temperature in the tube.</strong></p>
+              <div class="gallery portraits">
+                <figure><a class="photo-link" style="--photo-max-width: 497px" href="assets/follow-project/furnace-thermocouple.jpg" aria-label="View full-size image: A handheld thermocouple meter monitoring the furnace temperature"><img src="assets/follow-project/furnace-thermocouple-687.webp" srcset="assets/follow-project/furnace-thermocouple-480.webp 480w, assets/follow-project/furnace-thermocouple-687.webp 687w" sizes="(max-width: 520px) calc(100vw - 40px), 401px" width="687" height="912" alt="A handheld thermocouple meter monitoring the furnace temperature" loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/furnace-thermocouple.jpg">View full-size photo</a></figcaption></figure>
+                <figure><a class="photo-link" style="--photo-max-width: 497px" href="assets/follow-project/furnace-heating.jpg" aria-label="View full-size image: The furnace tube glowing during a heating run"><img src="assets/follow-project/furnace-heating-687.webp" srcset="assets/follow-project/furnace-heating-480.webp 480w, assets/follow-project/furnace-heating-687.webp 687w" sizes="(max-width: 520px) calc(100vw - 40px), 401px" width="687" height="912" alt="The furnace tube glowing during a heating run" loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/furnace-heating.jpg">View full-size photo</a></figcaption></figure>
+              </div>
+            </li>
+          </ol>
+
+          <p>If you built the furnace right, you should be able to swap out tubes fairly easily because they are only touching the ceramic washers. You can be fancy and have a tube for everything: a temperature calibration with the thermocouple in its tube, a dry gate oxidation tube, a P-type doping tube, an N-type doping tube, a wet oxide tube, an anneal tube, etc.</p>
+          <p>As you make devices, remember that cleanliness is important. During high-temperature steps in particular! There are so many ways a home or cheap chip fab can go wrong. Sensitivity to contaminants during thermal processing is one to pay attention to.</p>
+          <div class="gallery">
+            <figure><a class="photo-link" style="--photo-max-width: 495px" href="assets/follow-project/linked/furnace-contamination-1-1600.webp" aria-label="View larger image: A person tending a glowing furnace on a rooftop at night."><img src="assets/follow-project/linked/furnace-contamination-1-1600.webp" srcset="assets/follow-project/linked/furnace-contamination-1-800.webp 600w, assets/follow-project/linked/furnace-contamination-1-1600.webp 1200w" sizes="(max-width: 520px) calc(100vw - 40px), 401px" width="1200" height="1600" alt="A person tending a glowing furnace on a rooftop at night." loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/linked/furnace-contamination-1-1600.webp">View larger photo</a> · <a href="https://photos.app.goo.gl/NhY1FkkkDZFfYYir8">Google Photos</a></figcaption></figure>
+            <figure><a class="photo-link" style="--photo-max-width: 876px" href="assets/follow-project/linked/furnace-contamination-2-1600.webp" aria-label="View larger image: Furnace setup on a workbench, with a metal enclosure and connected test leads."><img src="assets/follow-project/linked/furnace-contamination-2-1600.webp" srcset="assets/follow-project/linked/furnace-contamination-2-800.webp 800w, assets/follow-project/linked/furnace-contamination-2-1600.webp 1600w" sizes="(max-width: 520px) calc(100vw - 40px), 401px" width="1600" height="1205" alt="Furnace setup on a workbench, with a metal enclosure and connected test leads." loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/linked/furnace-contamination-2-1600.webp">View larger photo</a> · <a href="https://photos.app.goo.gl/Wyq2NqsDzDjSpruz6">Google Photos</a></figcaption></figure>
+          </div>
+          <p>A potentially much easier thing to do than build your own furnace is to just buy the quartz tube from McMaster-Carr and buy a couple of canisters of MAPP welding gas, slowly heating the tube or a region of it to the desired temperature. Be careful not to make it explode from significant temporal or spatial temperature gradients. <strong>I haven’t tried this, but I think it would get you hot enough to do some doping.</strong></p>
+          <figure><a class="photo-link" style="--photo-max-width: 495px" href="assets/follow-project/torch-heating-idea.jpg" aria-label="View full-size image: Two gas torches positioned around a quartz tube"><img src="assets/follow-project/torch-heating-idea-684.webp" srcset="assets/follow-project/torch-heating-idea-480.webp 480w, assets/follow-project/torch-heating-idea-684.webp 684w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 850px) calc(100vw - 48px), 822px" width="684" height="912" alt="Two gas torches positioned around a quartz tube" loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/torch-heating-idea.jpg">View full-size photo</a></figcaption></figure>
+        </article>
+
+        <article class="tool" id="pov-recorder" aria-labelledby="pov-heading">
+          <h3 id="pov-heading">POV recorder</h3>
+          <p>A system for POV recording/streaming, nominally for lab work.</p>
+          <p>The benefits of this system over smart glasses are that the battery lasts as long as you want, you can script whatever functionality you need, and you can change the sensor/lens to your liking.</p>
+          <h4>Ingredients</h4>
+          <ol class="parts">
+<li><a href="https://a.co/d/004B2ons">Walfront OV5693 USB camera module (5 MP, autofocus, 180°)</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://a.co/d/056t2Hl9">USA Gear camera chest harness with quick-release buckles</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://a.co/d/05xdSbc9">Nitecore NB10000 Gen 4 power bank (10,000 mAh)</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://a.co/d/0h6t4DTO">Hagibis USB-C splitter (TUA08 USB + PD, 100 W, 10 Gbps)</a> <span class="vendor">(Amazon)</span></li>
+<li><a href="https://ebay.io/m/5UWYeb">Samsung phone I used (inactive listing)</a> <span class="vendor">(eBay)</span></li>
+<li>Tape</li>
+<li>Your Android smartphone to use as a control surface</li>
+</ol>
+          <div class="actions">
+            <a class="action video-link" href="https://youtube.com/shorts/7gylFLIPtwU?si=jvi3f3KeBV41UcJ6"><span aria-hidden="true">▶</span> Watch the video explanation on YouTube</a>
+          </div>
+        </article>
+
+        <article class="tool" id="transistor-tester" aria-labelledby="transistor-heading">
+          <h3 id="transistor-heading">Transistor tester</h3>
+          <p>A tool made out of an Arduino, breadboards, jumper wires, resistors, and your phone’s web browser that will I–V sweep your transistors at different voltage levels. By <a href="http://josh.com">josh.com</a>.</p>
+          <div class="actions">
+            <a class="action" href="https://github.com/bigjosh/arduino-mosfet-scanner">Pocket MOSFET scanner on GitHub</a>
+            <a class="action" href="https://github.com/bigjosh/arduino-mosfet-scanner/commits">Latest updates</a>
+          </div>
+        </article>
+
+        <article class="tool" id="spin-coater" aria-labelledby="spin-heading">
+          <h3 id="spin-heading">Spin coater</h3>
+          <p>A spin coater using PC fans and a Pi Pico with a touch screen. By <a href="http://josh.com">josh.com</a>.</p>
+          <div class="actions">
+            <a class="action" href="https://github.com/bigjosh/gotham-spincoater">Spincoater code and documentation on GitHub</a>
+            <a class="action" href="https://github.com/bigjosh/gotham-spincoater/commits">Latest updates</a>
+          </div>
+        </article>
+
+        <article class="tool" id="dwl-automation" aria-labelledby="dwl-heading">
+          <h3 id="dwl-heading">DWL automation</h3>
+          <p>Software for batch exposing samples or otherwise automating exposure procedures on a Heidelberg DWL66+. By <a href="http://josh.com">josh.com</a>.</p>
+          <div class="actions">
+            <a class="action" href="https://github.com/bigjosh/Automate-DWL66-plus-litography-machine">DWL66+ automation on GitHub</a>
+            <a class="action" href="https://github.com/bigjosh/Automate-DWL66-plus-litography-machine/commits">Latest updates</a>
+          </div>
+        </article>
+        <a class="back-top" href="#top">Back to top ↑</a>
+      </section>
+
+      <section id="research-agenda" aria-labelledby="agenda-heading">
+        <h2 id="agenda-heading">Process research agenda discussion</h2>
+        <p>It is possible to make simple custom devices very quickly by designing your process specifically for that purpose. Some ways I approach this:</p>
+        <ul>
+          <li>Stock pre-implanted wafers with oxide and polysilicon layers grown/deposited in advance to avoid any long furnace cycles at fabrication time.</li>
+          <li>Use spin-on dopant with rapid thermal anneal furnaces instead of sending wafers to external services for implant whenever possible.</li>
+          <li>Use SOI wafers and mesa isolation instead of more complicated and time-intensive STI or LOCOS techniques. SOI also gives you the ability to do work function engineering that could allow for junctionless devices, further minimizing the need for implant/doping steps because you don’t need to form wells in oppositely doped bulk silicon.</li>
+          <li>Instead of exclusively relying on maskless lithography, which inherently means your exposures have to be done in sequence, you can instead rely on a combination of maskless and masked lithography. As soon as you receive an order, you can start fabrication immediately by doing the first layer on a maskless setup while initiating mask writes for all subsequent layers in parallel across multiple mask writers, so all subsequent lithography can be done more quickly.</li>
+          <li>Obviously, but importantly, minimizing process steps gives three wins: shorter-loop process development, faster fabrication, and improved fundamentals of yield (number of steps × reliability of steps). It is not a perfect generalization, but the shortest process that does X is a good approximation of what I am trying to do.</li>
+        </ul>
+        <p>The following are representative run sheets for the processes I am researching and aiming to commercialize.</p>
+
+        <p class="runsheet-help">Each runsheet includes an interactive step explorer, diagrams, and a printable cleanroom sequence. Runsheets open in a new tab.</p>
+
+        <section id="nmos-test-processes" aria-labelledby="nmos-test-heading">
+          <h3 id="nmos-test-heading">Berkeley NMOS test processes</h3>
+          <div class="runsheet" id="poly-oxide-first">
+            <h4>Testing Poly gate NMOS fast</h4>
+            <p>Supplied oxide / poly stack · first transistor screen after one lithography level</p>
+            <div class="actions">
+              <a class="action" href="processes/02-experimental-nmos-poly-ring.html" target="_blank" rel="noopener">Open interactive runsheet ↗<span class="visually-hidden"> (new tab)</span></a>
+            </div>
+          </div>
+          <div class="runsheet" id="aluminum-gate-last">
+            <h4>Testing aluminum gate NMOS fast</h4>
+            <p>Two lithography levels · phosphorus SOD · evaporated aluminum gate and contacts</p>
+            <div class="actions">
+              <a class="action" href="processes/01-experimental-nmos-metal-gate.html" target="_blank" rel="noopener">Open interactive runsheet ↗<span class="visually-hidden"> (new tab)</span></a>
+            </div>
+          </div>
+        </section>
+        <section class="runsheet" id="nmos-production" aria-labelledby="nmos-production-heading">
+          <h3 id="nmos-production-heading">Berkeley NMOS production</h3>
+          <p>Four patterned levels · self-aligned polysilicon gate · phosphorus spin-on doping · one interconnect metal</p>
+            <div class="actions">
+              <a class="action" href="processes/03-target-nmos-soi.html" target="_blank" rel="noopener">Open interactive runsheet ↗<span class="visually-hidden"> (new tab)</span></a>
+            </div>
+        </section>
+        <section class="runsheet" id="cmos-production" aria-labelledby="cmos-production-heading">
+          <h3 id="cmos-production-heading">Berkeley CMOS production</h3>
+          <p>Six device-pattern levels · two spin-on dopants · self-aligned source/drain · one interconnect metal</p>
+            <div class="actions">
+              <a class="action" href="processes/04-target-cmos-soi-tin.html" target="_blank" rel="noopener">Open interactive runsheet ↗<span class="visually-hidden"> (new tab)</span></a>
+            </div>
+        </section>
+        <a class="back-top" href="#top">Back to top ↑</a>
+      </section>
+
+      <section id="good-moments" aria-labelledby="moments-heading">
+        <h2 id="moments-heading">Some good moments from the past two years of chipping!</h2>
+        <article class="moment" id="pepsi" aria-labelledby="pepsi-heading">
+          <h3 id="pepsi-heading">Pepsi and aluminum contacts</h3>
+          <p>Pepsi (and many other sodas) have a small amount of phosphoric acid. Enough to etch away the native oxide that grows on your aluminum contacts in ambient conditions, so dipping your chip in the Pepsi freshens it up for probing…</p>
+          <figure><a class="photo-link" style="--photo-max-width: 497px" href="assets/follow-project/linked/pepsi-contacts-1600.webp" aria-label="View larger image: A hand holding a small cup containing a patterned sample beside a Pepsi bottle and bench equipment."><img src="assets/follow-project/linked/pepsi-contacts-1600.webp" srcset="assets/follow-project/linked/pepsi-contacts-800.webp 602w, assets/follow-project/linked/pepsi-contacts-1600.webp 1205w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 850px) calc(100vw - 48px), 822px" width="1205" height="1600" alt="A hand holding a small cup containing a patterned sample beside a Pepsi bottle and bench equipment." loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/linked/pepsi-contacts-1600.webp">View larger photo</a> · <a href="https://photos.app.goo.gl/RPohCFGQFFge6WCy6">Google Photos</a></figcaption></figure>
+        </article>
+        <article class="moment" id="pocketfiche" aria-labelledby="pocketfiche-heading">
+          <h3 id="pocketfiche-heading">Pocket fiche production…</h3>
+          <figure><a class="photo-link" style="--photo-max-width: 877px" href="assets/follow-project/pocketfiche-production.jpg" aria-label="View full-size image: A batch of circular Pocket fiche samples on a laboratory bench"><img src="assets/follow-project/pocketfiche-production-957.webp" srcset="assets/follow-project/pocketfiche-production-480.webp 480w, assets/follow-project/pocketfiche-production-957.webp 957w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 850px) calc(100vw - 48px), 822px" width="957" height="720" alt="A batch of circular Pocket fiche samples on a laboratory bench" loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/pocketfiche-production.jpg">View full-size photo</a></figcaption></figure>
+        </article>
+        <article class="moment" id="nmos-proof" aria-labelledby="proof-heading">
+          <h3 id="proof-heading">My existence proof from the eight-hour NMOS process…</h3>
+          <figure><a class="photo-link" style="--photo-max-width: 497px" href="assets/follow-project/linked/eight-hour-nmos-1600.webp" aria-label="View larger image: Hands holding a silicon wafer with a rectangular array of devices patterned near the top."><img src="assets/follow-project/linked/eight-hour-nmos-1600.webp" srcset="assets/follow-project/linked/eight-hour-nmos-800.webp 602w, assets/follow-project/linked/eight-hour-nmos-1600.webp 1205w" sizes="(max-width: 520px) calc(100vw - 40px), (max-width: 850px) calc(100vw - 48px), 822px" width="1205" height="1600" alt="Hands holding a silicon wafer with a rectangular array of devices patterned near the top." loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/linked/eight-hour-nmos-1600.webp">View larger photo</a> · <a href="https://photos.app.goo.gl/NYkT8FGAqLbTwgVHA">Google Photos</a></figcaption></figure>
+          <div class="gallery">
+            <figure><a class="photo-link" style="--photo-max-width: 880px" href="assets/follow-project/nmos-cascade-output.jpg" aria-label="View full-size image: Measured MOSFET transfer curves and cascaded output plotted on a monitor"><img src="assets/follow-project/nmos-cascade-output-960.webp" srcset="assets/follow-project/nmos-cascade-output-480.webp 480w, assets/follow-project/nmos-cascade-output-960.webp 960w" sizes="(max-width: 520px) calc(100vw - 40px), 401px" width="960" height="720" alt="Measured MOSFET transfer curves and cascaded output plotted on a monitor" loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/nmos-cascade-output.jpg">View full-size photo</a></figcaption></figure>
+            <figure><a class="photo-link" style="--photo-max-width: 880px" href="assets/follow-project/nmos-output-curves.jpg" aria-label="View full-size image: A family of measured MOSFET output characteristic curves"><img src="assets/follow-project/nmos-output-curves-960.webp" srcset="assets/follow-project/nmos-output-curves-480.webp 480w, assets/follow-project/nmos-output-curves-960.webp 960w" sizes="(max-width: 520px) calc(100vw - 40px), 401px" width="960" height="720" alt="A family of measured MOSFET output characteristic curves" loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/nmos-output-curves.jpg">View full-size photo</a></figcaption></figure>
+            <figure><a class="photo-link" style="--photo-max-width: 880px" href="assets/follow-project/nmos-transfer-curve.jpg" aria-label="View full-size image: Measured MOSFET transfer characteristic curves"><img src="assets/follow-project/nmos-transfer-curve-960.webp" srcset="assets/follow-project/nmos-transfer-curve-480.webp 480w, assets/follow-project/nmos-transfer-curve-960.webp 960w" sizes="(max-width: 520px) calc(100vw - 40px), 401px" width="960" height="720" alt="Measured MOSFET transfer characteristic curves" loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/nmos-transfer-curve.jpg">View full-size photo</a></figcaption></figure>
+            <figure><a class="photo-link" style="--photo-max-width: 877px" href="assets/follow-project/nmos-test-setup.jpg" aria-label="View full-size image: A wafer connected to a breadboard measurement setup with test leads"><img src="assets/follow-project/nmos-test-setup-960.webp" srcset="assets/follow-project/nmos-test-setup-480.webp 480w, assets/follow-project/nmos-test-setup-960.webp 960w" sizes="(max-width: 520px) calc(100vw - 40px), 401px" width="960" height="723" alt="A wafer connected to a breadboard measurement setup with test leads" loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/nmos-test-setup.jpg">View full-size photo</a></figcaption></figure>
+          </div>
+        </article>
+        <article class="moment" id="wafer-connector" aria-labelledby="connector-heading">
+          <h3 id="connector-heading">Successfully soldering a 40-pin PCB connector to the surface of a wafer…</h3>
+          <div class="gallery">
+            <figure><a class="photo-link" style="--photo-max-width: 497px" href="assets/follow-project/soldered-connector-detail.jpg" aria-label="View full-size image: Microscope view of connector pins soldered to the wafer surface"><img src="assets/follow-project/soldered-connector-detail-960.webp" srcset="assets/follow-project/soldered-connector-detail-480.webp 480w, assets/follow-project/soldered-connector-detail-960.webp 960w" sizes="(max-width: 520px) calc(100vw - 40px), 401px" width="960" height="1275" alt="Microscope view of connector pins soldered to the wafer surface" loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/soldered-connector-detail.jpg">View full-size photo</a></figcaption></figure>
+            <figure><a class="photo-link" style="--photo-max-width: 877px" href="assets/follow-project/soldered-connector-setup.jpg" aria-label="View full-size image: The wafer and attached connector in a bench test setup"><img src="assets/follow-project/soldered-connector-setup-957.webp" srcset="assets/follow-project/soldered-connector-setup-480.webp 480w, assets/follow-project/soldered-connector-setup-957.webp 957w" sizes="(max-width: 520px) calc(100vw - 40px), 401px" width="957" height="720" alt="The wafer and attached connector in a bench test setup" loading="lazy" decoding="async"></a><figcaption><a href="assets/follow-project/soldered-connector-setup.jpg">View full-size photo</a></figcaption></figure>
+          </div>
+        </article>
+        <a class="back-top" href="#top">Back to top ↑</a>
+      </section>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p><a href="index.html">Gotham Silicon</a> · <a href="index.html#mc_embed_signup">Subscribe for updates</a> · <a href="https://forms.gle/yguDWXoMFjXPJxGa7">Contact us</a></p>
+  </footer>
+</body>
+</html>
