@@ -117,52 +117,14 @@
       line-height: 1.6;
     }
 
-    .project-tools {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-      text-align: left;
-    }
-
-    .project-tool {
-      display: flex;
-      flex-direction: column;
-      padding: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .project-tool h3 {
-      margin: 0 0 12px;
-      font-size: 1.3em;
-    }
-
-    .project-tool p {
-      margin: 0 0 24px;
-      color: #ddd;
+    .follow-link {
+      margin: 0;
       line-height: 1.5;
     }
 
-    .project-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px 20px;
-      margin-top: auto;
-    }
-
-    .project-links a {
+    .follow-link a {
       color: #fff;
-      line-height: 1.5;
       text-underline-offset: 4px;
-    }
-
-    .project-links a:hover {
-      text-decoration-thickness: 2px;
-    }
-
-    .follow-note {
-      margin: 24px auto 0;
-      color: #ddd;
-      line-height: 1.5;
     }
 
     /* Footer Styles */
@@ -227,10 +189,6 @@
         column-gap: 20px;
       }
 
-      .project-tools {
-        grid-template-columns: 1fr;
-      }
-
       #mc_embed_signup form {
         flex-direction: column;
       }
@@ -265,42 +223,10 @@
     <section id="follow-project" class="follow-project" aria-labelledby="follow-project-heading">
       <h2 id="follow-project-heading">Follow the project</h2>
       <p class="follow-intro">
-        Follow Gotham Silicon as it develops. Josh built these tools for the project, and you can explore
-        the code, build notes, and latest changes in their GitHub repositories.
+        Explore Gotham Silicon’s work in progress: lab recordings, tools and build tutorials,
+        process research and interactive runsheets, plus photos and milestones from the lab.
       </p>
-
-      <p class="follow-intro"><a href="follow-project.html" style="color: #fff; text-underline-offset: 4px;">Read the project page: lab recordings, tools, tutorials, and process research →</a></p>
-
-      <div class="project-tools">
-        <article class="project-tool" aria-labelledby="spincoater-heading">
-          <h3 id="spincoater-heading">Spincoater</h3>
-          <p>A six-sample spincoater for thin-film coating, with programmable spin recipes and build instructions.</p>
-          <div class="project-links">
-            <a href="https://github.com/bigjosh/gotham-spincoater" aria-label="View Spincoater on GitHub">View on GitHub</a>
-            <a href="https://github.com/bigjosh/gotham-spincoater/commits" aria-label="Latest Spincoater updates">Latest updates</a>
-          </div>
-        </article>
-
-        <article class="project-tool" aria-labelledby="dwl-heading">
-          <h3 id="dwl-heading">DWL66+ automation</h3>
-          <p>Automation for step-and-expose lithography across a grid of individual samples on the DWL66+ laserwriter.</p>
-          <div class="project-links">
-            <a href="https://github.com/bigjosh/Automate-DWL66-plus-litography-machine" aria-label="View DWL66+ automation on GitHub">View on GitHub</a>
-            <a href="https://github.com/bigjosh/Automate-DWL66-plus-litography-machine/commits" aria-label="Latest DWL66+ automation updates">Latest updates</a>
-          </div>
-        </article>
-
-        <article class="project-tool" aria-labelledby="mosfet-heading">
-          <h3 id="mosfet-heading">Pocket MOSFET scanner</h3>
-          <p>A pocket-sized Arduino rig for measuring MOSFET characteristics and gate leakage, with a phone-friendly interface.</p>
-          <div class="project-links">
-            <a href="https://github.com/bigjosh/arduino-mosfet-scanner" aria-label="View Pocket MOSFET scanner on GitHub">View on GitHub</a>
-            <a href="https://github.com/bigjosh/arduino-mosfet-scanner/commits" aria-label="Latest Pocket MOSFET scanner updates">Latest updates</a>
-          </div>
-        </article>
-      </div>
-
-      <p class="follow-note">Use Watch on GitHub to get notified about activity in each repository.</p>
+      <p class="follow-link"><a href="follow-project.html">Explore the project →</a></p>
     </section>
   </main>
 
