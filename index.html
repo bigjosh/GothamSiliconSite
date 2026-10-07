@@ -127,6 +127,42 @@
       text-underline-offset: 4px;
     }
 
+    .acknowledgments {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .acknowledgments-intro {
+      max-width: 680px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+
+    .acknowledgments-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px 24px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0;
+      line-height: 1.4;
+    }
+
+    .acknowledgments-list a {
+      color: #fff;
+      text-decoration-color: rgba(255, 255, 255, 0.4);
+      text-underline-offset: 4px;
+    }
+
+    .acknowledgments-list a:hover,
+    .acknowledgments-list a:focus-visible {
+      text-decoration-color: #fff;
+    }
+
     /* Footer Styles */
     footer {
       width: 100%;
@@ -227,6 +263,19 @@
         process research and interactive runsheets, plus photos and milestones from the lab.
       </p>
       <p class="follow-link"><a href="follow-project.html">Explore the project →</a></p>
+    </section>
+
+    <section id="acknowledgments" class="acknowledgments" aria-labelledby="acknowledgments-heading">
+      <h2 id="acknowledgments-heading">Acknowledgments</h2>
+      <p class="acknowledgments-intro">With thanks to the people and organizations supporting this work:</p>
+      <ul class="acknowledgments-list">
+        <li><a href="https://astera.org/residency/">Astera Institute Residency Program</a></li>
+        <li>Wicklow Capital</li>
+        <li><a href="https://cni.columbia.edu/">Columbia Nano Initiative</a></li>
+        <li><a href="https://nanolab.berkeley.edu/">UC Berkeley Marvell NanoLab</a></li>
+        <li><a href="https://josh.com/">josh.com</a></li>
+        <li><a href="https://cwandt.com/">CW&amp;T</a></li>
+      </ul>
     </section>
   </main>
 
